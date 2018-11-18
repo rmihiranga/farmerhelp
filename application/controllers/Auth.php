@@ -7,7 +7,7 @@ class Auth extends CI_Controller{
     }
 
     public function register(){
-        $this->load->view('registerExpert.php');
+        $this->load->view('register');
     }
 }
 
