@@ -1,12 +1,16 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
-
-<form action = "<?php echo site_url('Message/chatbox')?>" method ="post">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/chatbox.css">
+<script src="<?php echo base_url(); ?>js/jquery-3.2.1.min.js"></script>
+<form id="form_comment" >
   <div class="form-group required">
-    <input type ="number" hidden>
+    <input type ="number" name ="comment_id" id= "commentId" hidden >
     <label class="exampleInput">Name  (නම)​ </label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Enter name" required >
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required >
    
   </div>
   <div class="form-group required">
@@ -14,25 +18,53 @@
     <textarea type="text" class="form-control" id="textarea" placeholder="Enter here" name ="message" required></textarea>
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <input type="button" class="btn-submit" id="submitButton"
+                    value="Publish" />
+  <div id="comment-message">Comments Added Successfully!</div>
 </form>
 
-<style>
-    .form-group{
-        width:50%
-    }
-    #textarea{
-        height:120px;
-    }
-    .form-group.required .exampleInput:after {
-  content:"*";
-  color:red;
-}
-    form{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    }
-    </style>
+<script>
+  function postReply(commentId) {
+		$('#commentId').val(commentId);
+		$("#name").focus();
+  }
+  $("#submitButton").click(function()
+  {
+		
+		$("#comment-message").css('display', 'none');
+		 str = $("#form_comment").serialize();
+		var comment_id = $('#commentId').val();
+		var name = $('#name').val();
+    var message = $('#textarea').val();
+	//	alert(str);
+    
+		$.ajax({
+			
+			url : "<?php echo site_url('Message/chatbox')?>/",
+		//	dataType :"json",
+			data : {comment_id:comment_id,name:name,message:message},
+			type : 'post',
+			error: function (xhr, ajaxOptions, thrownError) {
+                       alert(xhr.status);
+                      alert(thrownError);
+                      },
+			success : function(data) {
+			//	var result = eval('(' + response + ')');
+				
+        alert('sucess');
+			
+					$("#comment-message").css('display', 'inline-block');
+					$("#name").val("");
+					$("#textarea").val("");
+					$("#commentId").val("");
+					//listComment();
+				
+			}
+			
+		});
+  });
+
+
+
+
+  </script>
