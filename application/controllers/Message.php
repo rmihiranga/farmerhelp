@@ -13,20 +13,24 @@ class Message extends CI_Controller
         $this->load->view('chatbox');
         $this->load->helper('url');
     }
-    public function chatbox(){
+    public function chatbox()
+    {
         $save =array(
             'comment_id'=> $this->input->post('comment_id'),
             'name'=> $this->input->post('name'),
             'message' => $this->input->post('message'),
+            'parent_id'=>$this->input->post('parent_id'),
             'date' => date('Y-m-d H:i:s')
             
         );
         
         $this->Message_model->savemessage($save);
+        echo $save;
         //redirect('')
     }
    
-    public function chatlist(){
+    public function chatlist()
+    {
         $record_set = array();
         $query=$this->db->query("SELECT * FROM messages ORDER BY parent_id asc, comment_id asc");
         foreach($query->result_array() as $row){
