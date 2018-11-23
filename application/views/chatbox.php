@@ -1,13 +1,12 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/chatbox.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/chatbox.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="<?php echo base_url(); ?>js/jquery-3.2.1.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
 
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
 
-
-<div id="output"></div>
-
+<div class =chat>
+<h2>ඔබගේ ගැටලූ අප වෙත යොමුකරන්න​.</h2>
 <form id="form_reply"  >
   <div class="form-group required">
     <input type ="number" name ="comment_id" id= "rcommentId" hidden >
@@ -40,7 +39,9 @@
                     value="Publish" />
   <div id="comment-message">Comments Added Successfully!</div>
 </form>
-
+<h2>ඔබ අප වෙත යොමුකරන ලද ගැටලු සහ ඒවාට විසදුම්.</h2>
+<div id="output"></div>
+</div>
 <script>
 var parent_id;
   function showReply(commentId) 
@@ -97,7 +98,7 @@ var parent_id;
   });
   $("#submitButton").click(function()
   {
-	
+    parent_id=0;
 		$("#comment-message").css('display', 'none');
 		 str = $("#form_comment").serialize();
 		var comment_id = $('#commentId').val();
@@ -205,11 +206,100 @@ function listComment() {
 
 	</script>
 <style>
-
+.form-group{
+    width:80%
+}
+#textarea{
+    height:120px;
+}
+.form-group.required .exampleInput:after {
+content:"*";
+color:red;
+}
+form{
+    background-color:gray;
+}
 #form_comment{
-bottom: 0;
-right: 0;
-margin-left:700px;
+
 width :100%;
+
+}
+body {
+	font-family: Arial;
+	width: 1100px;
+}
+
+.comment-form-container {
+	background: #F0F0F0;
+	border: #e0dfdf 1px solid;
+	padding: 20px;
+	border-radius: 2px;
+}
+
+.input-row {
+	margin-bottom: 20px;
+}
+
+.input-field {
+	width: 100%;
+	border-radius: 2px;
+	padding: 10px;
+	border: #e0dfdf 1px solid;
+}
+
+.btn-submit {
+	padding: 10px 20px;
+	background: #333;
+	border: #1d1d1d 1px solid;
+	color: #f0f0f0;
+	font-size: 0.9em;
+	width: 100px;
+	border-radius: 2px;
+    cursor:pointer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.comment-row {
+	border-bottom: #e0dfdf 1px solid;
+	margin-bottom: 15px;
+	padding: 15px;
+}
+
+.outer-comment {
+	background: #F0F0F0;
+	padding: 20px;
+	border: #dedddd 1px solid;
+}
+
+span.commet-row-label {
+	font-style: italic;
+}
+
+span.posted-by {
+	color: #09F;
+}
+
+.comment-info {
+	font-size: 0.8em;
+}
+.comment-text {
+    margin: 10px 0px;
+}
+.btn-reply {
+    font-size: 0.8em;
+    text-decoration: underline;
+    color: #888787;
+    cursor:pointer;
+}
+#comment-message {
+    margin-left: 20px;
+    color: #189a18;
+    display: none;
+}
+.chat{
+    margin-left:300px;
 }
 </style>
