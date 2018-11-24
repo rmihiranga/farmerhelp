@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     
 
-    <title>Register Page for Field Expert</title>
+    <title>Registration page</title>
     <link href = "<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel = "stylesheet">
     <link href = "<?php echo base_url(); ?>assets/css/style.css" rel = "stylesheet">
     
@@ -24,13 +24,19 @@
         <h1>Register  ලියාපදිංචි කරන්න</h1> 
         <p>Enter your Details here.</p> 
       </div>
+
   
     </div>
     
 
     <div class="container center_div">
       <div class="col-md-5 col-md-offset-3">
-        
+
+        <?php if (isset($_SESSION['success'])) { ?>
+          <script type='text/javascript'>alert('Registration Successfull')</script>
+        <?php
+        } ?>
+        <?php echo validation_errors(); ?>
         <form action="" method="POST">
         <div class ="form-group">
             <label for="Username">Username</label>
