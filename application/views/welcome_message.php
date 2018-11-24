@@ -62,13 +62,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           
-        
-          
+        <?php
+        if($_SESSION['user_logged']){
+         echo $this->session->userdata['username'];
+          echo "<a href=\"Auth/logout\" class=\"btn btn-default btn-flat\">Logout</a>";
 
-        <a href="<?php echo base_url();?>index.php/Auth/login"="#" class="btn btn-default btn-flat">Login</a>
-        <a href="<?php echo base_url();?>index.php/Auth/register"="#" class="btn btn-default btn-flat">Register</a>
-              
-            
+        }
+        else{
+        echo "<a href=\"Auth/login\" class=\"btn btn-default btn-flat\">Login</a>";
+        echo "<a href=\"Auth/register\"=\"#\" class=\"btn btn-default btn-flat\">Register</a>";
+        }      
+           ?> 
       </div>
     </nav>
   </header>
@@ -79,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -201,5 +205,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
 </body>
 </html>

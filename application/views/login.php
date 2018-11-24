@@ -9,6 +9,8 @@
     
 
     <title>Login Page</title>
+    <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+    
     <link href = "<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel = "stylesheet">
     <link href = "<?php echo base_url(); ?>assets/css/style.css" rel = "stylesheet">
     
