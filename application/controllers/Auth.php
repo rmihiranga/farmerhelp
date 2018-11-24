@@ -39,7 +39,7 @@ class Auth extends CI_Controller{
     public function logout(){
         $this->session->unset_userdata('username');
         $_SESSION['user_logged']=FALSE;
-        redirect("welcome", "refresh");
+        redirect(base_url(), "refresh");
     }
 
     public function register(){

@@ -69,8 +69,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         }
         else{
-        echo "<a href=\"Auth/login\" class=\"btn btn-default btn-flat\">Login</a>";
-        echo "<a href=\"Auth/register\"=\"#\" class=\"btn btn-default btn-flat\">Register</a>";
+        echo "<a href=\"index.php/Auth/login\" class=\"btn btn-default btn-flat\">Login</a>";
+        echo "<a href=\"index.php/Auth/register\"=\"#\" class=\"btn btn-default btn-flat\">Register</a>";
         }      
            ?> 
       </div>
