@@ -157,8 +157,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
                 <div class="sppb-addon-content">
                     <p><strong><span style="font-size: 14pt;">ක්ෂේත‍්‍රයේ යේදී වැළඳෙන රෝග</span></strong></p>
-                    <p><strong><span style="font-size: 12pt;">කෘසිපරේසියේ කුලයේ භෝග වලට වැළඳෙන රෝග සහ රෝග පාලනය</span></strong></p>
-                    <p style="text-align: justify;"><span style="font-size: 12pt;">මෙම කුලයට අයත් භෝග අතරින් ගෝවා, මල් ගෝවා, චීන ගෝවා, නෝකෝල්, රාබු, බෘකොලි යන භෝග වල රෝග සහ රෝග පාලනය පිළිබඳව විමසා බලමු.<br /><br /></span></p>
+                    
                     <p><strong><span style="font-size: 14pt;">වළයාකාර පුල්ලි රෝගය/ගෙඹි ඇස් රෝගය</span></strong></p>
                     <div style="text-align: justify;"><span style="font-size: 12pt;">කෘසිපරේසියේ කුලයේ භෝගවල ශාකයේ පත‍්‍රවලට මයිකොස්පිරෙල්ලා බ‍්‍රැසිකෝලා(<em>Mycosphaerella brassicola</em><em>)</em>නම් දිලීරය මඟින් ඇති කරන රෝගයකි. පත‍්‍රවල වළයාකාරව පුල්ලි ඇති කරයි. පිටතින් ඇති මේරූ පත‍්‍රවල හානිය වැඩිපුර දැකගත හැකිය. අභ්‍යන්තර පත‍්‍රවලට ඇති වන හානියට වඩා අධිකය.</span>
                     </div>

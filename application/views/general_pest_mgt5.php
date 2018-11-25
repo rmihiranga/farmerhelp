@@ -156,8 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
                     <div class="sppb-addon-content">
                         <p><strong><span style="font-size: 14pt;">ක්ෂේත‍්‍රයේදී වැළඳෙන රෝග</span></strong></p>
-                        <p><strong><span style="font-size: 12pt;">කෘසිපරේසියේ කුලයේ භෝග වලට වැළඳෙන රෝග සහ රෝග පාලනය</span></strong></p>
-                        <p style="text-align: justify;"><span style="font-size: 12pt;">මෙම කුලයට අයත් භෝග අතරින් ගෝවා, මල් ගෝවා, චීන ගෝවා, නෝකෝල්, රාබු, බෘකොලි යන භෝග වල රෝග සහ රෝග පාලනය පිළිබඳව විමසා බලමු.<br /><br /></span>
+                        
                         <span style="font-size: 14pt;"><strong>පිටිපුස් රෝගය</strong><br /><span style="font-size: 12pt;">තවානේදී මෙන්ම ක්ෂේත‍්‍රයේදී ද දක්නට ලැබෙන රෝගයකි. වියළි සහ උෂ්ණත්වය වැඩි පරිසර තත්ත්ව වලදී මෙම රෝගය බහුලව වැළඳේ. පිටි වැනි සුදු පැහැති පැල්ලම් පත‍්‍ර වල උඩු පෘෂ්ඨයේ දැක ගත හැකි වේ. මෙම සුදු පැහැයට හේතුව වන්නේ එරිසිපේ විශේෂයේ (<em>Erysiphe spp.</em>)දිලීර ඇතුළු වෙනත් දිලීර කාණ්ඩයන්ය. ආසාදිත පත‍්‍ර අවපැහැ වී අනතුරුව කහ පැහැයක් දක්වයි. ආසාදනය උග‍්‍ර වූ විට පත‍්‍ර රැවුලි වැටී මැරී යාම සහ අවසානයේ ශාකයෙන් වෙන් වී හැලී යයි.</span></span></p>
                     </div>
                 </div>

@@ -7,14 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Farmer Help</title>
-  <link href="https://www.doa.gov.lk/index.php/si/component/sppagebuilder/page/184-club-root-udarata-elavalu-si" rel="canonical" />
-  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/sppagebuilder.css" type="text/css" />
-  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
-  <link rel="stylesheet" href="https://www.doa.gov.lk/plugins/system/popup_anywhere/css/noborder.css" type="text/css" />
-  <link rel="stylesheet" href="/media/mod_social_slider/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="/media/mod_languages/css/template.css" type="text/css" />
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -70,13 +62,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           
-        
-          
+        <?php
+        if($_SESSION['user_logged']){
+         echo $this->session->userdata['username'];
+          echo "<a href=\"Auth/logout\" class=\"btn btn-default btn-flat\">Logout</a>";
 
-        <a href="<?php echo base_url();?>index.php/Auth/login"="#" class="btn btn-default btn-flat">Login</a>
-        <a href="<?php echo base_url();?>index.php/Auth/register"="#" class="btn btn-default btn-flat">Register</a>
-              
-            
+        }
+        else{
+        echo "<a href=\"index.php/Auth/login\" class=\"btn btn-default btn-flat\">Login</a>";
+        echo "<a href=\"index.php/Auth/register\"=\"#\" class=\"btn btn-default btn-flat\">Register</a>";
+        }      
+           ?> 
       </div>
     </nav>
   </header>
@@ -87,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -110,26 +106,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-            <i class="fa fa-dashboard"></i> <span>Pesticides</span>
+            <i class="fa fa-dashboard"></i> <span>පළිබෝධ වර්ග​</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> දිළීර​</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> බැක්ටීරියා</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> කෘමීන්</a></li>
           </ul>
         </li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-            <i class="fa fa-dashboard"></i> <span>Pest Control</span>
+            <i class="fa fa-dashboard"></i> <span>පළිබෝධ පාළනය​</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
           </ul>
         </li>
         
@@ -147,55 +144,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-    <div class="sppb-row">
-        <div class="sppb-col-sm-2">
-            <div class="sppb-addon-container" style="" data-sppb-wow-duration="300ms"></div>
-        </div>
-        <div class="sppb-col-sm-10 ">
-            <div class="sppb-addon-container" style="padding:10px 10px 10px 10px;">
-            <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
-                <div class="sppb-addon-content">
-                    <p><strong><span style="font-size: 14pt;">ක්ෂේත‍්‍රයේදී වැළඳෙන රෝග</span></strong></p>
-                    
-                    <p><strong><span style="font-size: 14pt;">යටිපුස් රෝගය</span> </strong></p>
-                    <p style="text-align: justify;"><span style="font-size: 12pt;">රෝග කාරකය පෙරනොස්පෝරා සහ සියුඩො පෙරනොස්පෝරා විශේෂයට අයත් දිලීරයන්ය. මෙයද තවානේදී භෝගවලට වැළඳෙන ඉතාමත් හානිකර රෝගී තත්ත්වයකි. තවානේදී මෙන්ම ක්ෂේත‍්‍රයේදී ද භෝගයට හානි කරයි. අධික ආර්ද්‍රතාවයක් හා සාමාන්‍ය උෂ්ණත්වයේ දී රෝගය වැළඳීමේ අවදානම වැඩියි.</span></p>
-                    <p style="text-align: justify;"><span style="font-size: 12pt;"><br /><br /></span></p>
-                </div>
-            </div>
-            <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
-                <div class="sppb-addon-content">
-                    <img class="sppb-img-responsive" src="<?php echo base_url();?>assets/dist/img/yati_pus_rogaya.jpg" alt="">
-                </div>
-            </div>
-            <div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div>
-            <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
-                <div class="sppb-addon-content">
-                    <p><strong><span style="font-size: 14pt;">රෝග ලක්‍ෂණ</span></strong> </p>
-                <div style="text-align: justify;">
-                    <span style="font-size: 12pt;">ශාකයේ  ඕනෑම අවස්ථාවකදී රෝගයට පාත‍්‍ර වීමේ අවදානම සහිතය. පත‍්‍රයේ යටි පෘෂ්ඨය ආසාදනයට ලක්වන අතර උඩු පෘෂ්ඨය කහ පැහැ වේ.කුඩා පත‍්‍ර හෝ බීජ පත‍්‍ර ආසාදනය වීමෙන් කහ පැහැ වී පසුව එම පත‍්‍ර මැරී හැලී යයි. රෝගය සඳහා පාරිසරික තත්ත්වයන් හිතකර අවස්ථාවේදී සම්පූර්ණ ශාකයම විනාශ වී යයි.</span>
-                </div>
-                <div style="text-align: justify;">
-                    <span style="font-size: 12pt;"> </span>
-                </div>
-            </div>
-        </div>
-        <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
-            <div class="sppb-addon-content">
-                <img class="sppb-img-responsive" src="<?php echo base_url();?>assets/dist/img/pela_ghnya_adika_nou_awsthwk.jpg" alt="">
-            </div>
-        </div>
-        <div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div>
-        <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
-            <div class="sppb-addon-content">
-                <p><strong><span style="font-size: 14pt;">රෝග පාලනය </span></strong></p>
-                <p style="text-align: justify;"><span style="font-size: 12pt;">ක්ෂේත&zwj;්&zwj;රය පිරිසිදුව තබා ගැනීම, උණු වතුර මඟින් බීජ ප&zwj;්&zwj;රතිකාර කිරීම (උෂ්ණත්වය සෙ.අංශක 50 ක් ජලයෙහි විනාඩි 15-25 ක් බීජ ගිල්වා තැබීමෙන් තවාන් පාත්ති ජීවානුහරණය, පිරිසිදු තවානක් පවත්වා ගැනීම, වල් පැළෑටි පාලනය, භෝග&nbsp;&nbsp; මාරුව සහ පැළ ගහණය අධික නොවීමට වග බලා ගත යුතුය. මීට අමතරව කැප්ටාන්, මැන්කොසෙබ්, මැනෙබ්, ප්&zwj;රොපිනෙබ් සහ ක්ලෝරොතැලොනිල් වැනි දිලීර නාශකයක් නිර්දේශිත ප&zwj;්&zwj;රමාණයෙන් යෙදිය යුතුය.</span></p>
-            </div>
-        </div>
-        <div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div>
+      <h1>
+      පළිබෝධ පාළනය​
+        <small>සාමාන්‍ය (රසායනික)</small><br>
+      
+    </section>
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+    <ul>
+        <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile1"></i> දියමලංකෑම​</a></li>
+        <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile2"></i> කෘසිපරේසියේ කුලයේ භෝග වලට වැළඳෙන රෝග සහ රෝග පාලනය​</a></li>
+        <ul>
+            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile3"></i> වළයාකාර පුල්ලි රෝගය/ගෙඹි ඇස් රෝගය</a></li>
+            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile4"></i> නම්‍යශීලී කඳක් ඇති වීම (Wire stem)</a></li>
+            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile5"></i> පිටිපුස් රෝගය​</a></li>
+            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile6"></i> යටිපුස් රෝගය</a></li>
+            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile7"></i> ස්ක්ලෙරෝටියම් මෘදු කුණුවීම​</a></li>
+            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile8"></i> බීට්වලට වැළඳෙන රෝග</a></li>
+        </ul>
+        
+    </ul>
     </div>
-</div>
-</div>
-    
+
+        </section>
+        <!-- right col -->
+      </div>
+      <!-- /.row (main row) -->
+
     </section>
     <!-- /.content -->
   </div>
@@ -244,5 +220,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
 </body>
 </html>

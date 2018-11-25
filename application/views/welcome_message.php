@@ -106,26 +106,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-            <i class="fa fa-dashboard"></i> <span>Pesticides</span>
+            <i class="fa fa-dashboard"></i> <span>පළිබෝධ වර්ග​</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> දිළීර​</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> බැක්ටීරියා</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> කෘමීන්</a></li>
           </ul>
         </li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-            <i class="fa fa-dashboard"></i> <span>Pest Control</span>
+            <i class="fa fa-dashboard"></i> <span>පළිබෝධ පාළනය​</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
           </ul>
         </li>
         
