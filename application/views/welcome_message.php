@@ -112,9 +112,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> දිළීර​</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> බැක්ටීරියා</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> කෘමීන්</a></li>
+          <li><a href="<?php echo base_url();?>index.php/pesttypes/type1"><i class="fa fa-circle-o"></i> දිළීර​</a></li>
+            <li><a href="<?php echo base_url();?>index.php/pesttypes/type2"><i class="fa fa-circle-o"></i> බැක්ටීරියා</a></li>
+            <li><a href="<?php echo base_url();?>index.php/pesttypes/type3"><i class="fa fa-circle-o"></i> කෘමීන්</a></li>
           </ul>
         </li>
         <li class="active treeview">
@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </ul>
         </li>
         
-        <li><a href="<?php echo base_url();?>index.php/Message/chatboxx"><i class="fa fa-book"></i> <span>ChatBox</span></a></li>
+        <li><a href="<?php echo base_url();?>index.php/Message/chatboxx"><i class="fa fa-book"></i> <span>විමසීම්</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>

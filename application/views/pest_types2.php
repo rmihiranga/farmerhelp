@@ -7,14 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Farmer Help</title>
-  <link href="https://www.doa.gov.lk/index.php/si/component/sppagebuilder/page/184-club-root-udarata-elavalu-si" rel="canonical" />
-  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/sppagebuilder.css" type="text/css" />
-  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
-  <link rel="stylesheet" href="https://www.doa.gov.lk/plugins/system/popup_anywhere/css/noborder.css" type="text/css" />
-  <link rel="stylesheet" href="/media/mod_social_slider/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="/media/mod_languages/css/template.css" type="text/css" />
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -70,13 +62,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           
-        
-          
+        <?php
+        if($_SESSION['user_logged']){
+         echo $this->session->userdata['username'];
+          echo "<a href=\"Auth/logout\" class=\"btn btn-default btn-flat\">Logout</a>";
 
-        <a href="<?php echo base_url();?>index.php/Auth/login"="#" class="btn btn-default btn-flat">Login</a>
-        <a href="<?php echo base_url();?>index.php/Auth/register"="#" class="btn btn-default btn-flat">Register</a>
-              
-            
+        }
+        else{
+        echo "<a href=\"index.php/Auth/login\" class=\"btn btn-default btn-flat\">Login</a>";
+        echo "<a href=\"index.php/Auth/register\"=\"#\" class=\"btn btn-default btn-flat\">Register</a>";
+        }      
+           ?> 
       </div>
     </nav>
   </header>
@@ -87,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -129,7 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
+            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
             <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
           </ul>
         </li>
@@ -148,44 +144,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-    <div class="sppb-row">
-        <div class="sppb-col-sm-2">
-            <div class="sppb-addon-container" style="" data-sppb-wow-duration="300ms"></div>
-        </div>
-        <div class="sppb-col-sm-10">
-            <div class="sppb-addon-container" style="">
-                <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
-                    <div class="sppb-addon-content">
-                        <p><strong><span style="font-size: 14pt;">ක්ෂේත&zwj;්&zwj;රයේදී වැළඳෙන රෝග</span></strong></p>
-                        
-                        <br />
-                        <div style="text-align: justify;"><span style="font-size: 12pt;"><strong><br />ස්ක්ලෙරෝටියම් මෘදු කුණුවීම</strong></span>
-                        </div>
-                        <p style="text-align: justify;"><span style="font-size: 12pt;">ස්ක්ලෙරෝටියම් රොල්ප්සි (<em>Sclerotinium rolpsi</em>) නම් දිලීරය නිසා ඇති වන තත්ත්වයකි. පත&zwj;්&zwj;රවලට මෙන්ම ගෙඩිවලටද හානි ඇති කරයි. සුදු පැහැති දිලීර සූත&zwj;්&zwj;රිකා පත&zwj;්&zwj;ර මත මෙන්ම පත&zwj;්&zwj;ර නටුව මතද ගෙඩි හටගත් පසු ගෙඩි මතද වර්ධනය වේ. හානියට ලක්වී කල් ගත වූ පසු සුදු පැහැ&nbsp; දිලීර ජාල කළු පැහැයෙන් පෙනෙන අතර හානියට ලක් වූ ශාක කොටස කුණු වී සම්පුර්ණයෙන්ම විනාශ වේ.මෙම දිලීර ජාල අහිතකර තත්ත්ව මඟ හැරීම සඳහා ඉතා තද, භෞතික තත්ත්ව මඟින් විනාශ නොවන ස්ක්ලෙරෝටිියා නම් කාලතරණ ව්&zwj;යුහ සාදයි.</span></p>
-                    </div>
-                </div>
-                <div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div>
-                <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
-                    <div class="sppb-addon-content">
-                        <img class="sppb-img-responsive" src="<?php echo base_url();?>assets/dist/img/asadanayta_lak_vu_gova.jpg" alt="">
-                    </div>
-                </div>
-                <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
-                    <div class="sppb-addon-content">
-                        <p style="text-align: justify;"><strong><span style="font-size: 14pt;">රෝග පාලනය</span></strong><br />
-                        <span style="font-size: 12pt;">ක්‍ෂේත‍්‍රය ඉතා පිරිසිදුව තබා ගැනීම, පෙර වගාවේ භෝග අවශේෂයන් ක‍්‍රමවත්ව ඉවත් කිරීම සහ භෝගයේ සනීපාරක්‍ෂාව පවත්වා ගැනීම මඟින් මෙම රෝග කාරකය ක්‍ෂේත‍්‍රයේ පැතිරීම පාලනය කළ හැක.  මෙම දිලීර ජාල කාලතරණ ව්‍යුහ සෑදීමට පෙර නිර්දේශිත දිලීර නාශකයක් යෙදීම මඟින් පාලනය කළ යුතුය. </span></p>
-                    </div>
-                </div>
-                <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
-                    <div class="sppb-addon-content">
-                        <img class="sppb-img-responsive" src="<?php echo base_url();?>assets/dist/img/kshethraa_clean_tha_ganima.jpg" alt="">
-                    </div>
-                </div>
-                <div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div>
-            </div>
-        </div>
-    </div>
+      <h1>
+      පළිබෝධ වර්ග​
+        <small>බැක්ටීරියා​</small><br>
+      
+    </section>
+
+    <!-- Main content -->
     
+
+        </section>
+        <!-- right col -->
+      </div>
+      <!-- /.row (main row) -->
+
     </section>
     <!-- /.content -->
   </div>
@@ -234,5 +206,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
 </body>
 </html>

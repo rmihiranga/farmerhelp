@@ -145,8 +145,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      පළිබෝධ පාළනය​
-        <small>සාමාන්‍ය (රසායනික)</small><br>
+      පළිබෝධ වර්ග​
+        <small>දිළීර​</small>
       
     </section>
 
