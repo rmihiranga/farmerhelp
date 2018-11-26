@@ -21,12 +21,14 @@ class Auth extends CI_Controller{
             $user = $query->row();
 
             if($user->email){
+
                $session_data = array(
                    'username'=>$username
                );
                $_SESSION['user_logged']=TRUE;
                 $this->session->set_userdata($session_data);
                 echo $this->session->userdata['username'];
+
                 redirect("welcome", "refresh");
             }else{
                 $this->session->set_flashdata("error","Invalid Credentials!");
@@ -36,10 +38,12 @@ class Auth extends CI_Controller{
         
         $this->load->view('login.php');
     }
+
     public function logout(){
         $this->session->unset_userdata('username');
         $_SESSION['user_logged']=FALSE;
         redirect(base_url(), "refresh");
+
     }
 
     public function register(){
