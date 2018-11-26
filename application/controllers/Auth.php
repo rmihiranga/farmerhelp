@@ -12,24 +12,26 @@ class Auth extends CI_Controller{
 
             $username = $_POST['username'];
             $password = $_POST['password'];
-
+            //$typp = $this->db->query("SELECT type FROM register where username='$username'");
             $this->db->select('*');
             $this->db->from('register');
+
             $this->db->where(array('username' => $username, 'password' => $password));
             $query = $this->db->get();
-
+            
             $user = $query->row();
-
+            $typp=$user->type;
             if($user->email){
 
                $session_data = array(
-                   'username'=>$username
+                   'username'=>$username,
+                   'type'=>$typp
                );
                $_SESSION['user_logged']=TRUE;
                 $this->session->set_userdata($session_data);
                 echo $this->session->userdata['username'];
 
-                redirect("welcome", "refresh");
+                redirect(base_url(), "refresh");
             }else{
                 $this->session->set_flashdata("error","Invalid Credentials!");
                 redirect("auth/login", "refresh");
@@ -75,6 +77,17 @@ class Auth extends CI_Controller{
         
         $this->load->view('register.php');
     }
+    public function frame(){
+        $this->load->view('component/admin_frame');
+    }
+
+    public function member()
+    {
+        $this->load->model('Auth_model');
+        $data['post']=$this->Auth_model->getallusers();
+        $this->load->view('members',$data);
+    }
+    
 }
 
 ?>

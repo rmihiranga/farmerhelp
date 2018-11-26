@@ -156,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
-
+   
     <div class =chat>
     <h2>ඔබගේ ගැටලූ අප වෙත යොමුකරන්න​.</h2>
     <form id="form_reply"  >
@@ -191,6 +191,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         value="Publish" />
     <div id="comment-message">Comments Added Successfully!</div>
     </form>
+  
     <h2>ඔබ අප වෙත යොමුකරන ලද ගැටලු සහ ඒවාට විසදුම්.</h2>
     <div id="output"></div>
     </div>
