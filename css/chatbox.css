@@ -1,0 +1,10 @@
+.form-group{
+    width:50%
+}
+#textarea{
+    height:120px;
+}
+.form-group.required .exampleInput:after {
+content:"*";
+color:red;
+}

@@ -1,7 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +44,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-
   <header class="main-header">
     <!-- Logo -->
     <a href="<?php echo base_url();?>"="index2.html" class="logo">
@@ -78,13 +76,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </nav>
   </header>
-
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-
       <div class="user-panel">
         <div class="pull-left image">
           <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
@@ -94,7 +90,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a href="<?php echo base_url();?>"="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -111,39 +106,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-
             <i class="fa fa-dashboard"></i> <span>පළිබෝධ වර්ග​</span>
-
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-
           <li><a href="<?php echo base_url();?>index.php/pesttypes/type1"><i class="fa fa-circle-o"></i> දිළීර​</a></li>
             <li><a href="<?php echo base_url();?>index.php/pesttypes/type2"><i class="fa fa-circle-o"></i> බැක්ටීරියා</a></li>
             <li><a href="<?php echo base_url();?>index.php/pesttypes/type3"><i class="fa fa-circle-o"></i> කෘමීන්</a></li>
-
           </ul>
         </li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-
             <i class="fa fa-dashboard"></i> <span>පළිබෝධ පාළනය​</span>
-
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-
-            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
+            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
             <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
           </ul>
         </li>
         
         <li><a href="<?php echo base_url();?>index.php/Message/chatboxx"><i class="fa fa-book"></i> <span>විමසීම්</span></a></li>
-
         <li class="header">LABELS</li>
         <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
@@ -158,8 +145,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
-        <small>Control panel</small>
+      පළිබෝධ වර්ග​
+        <small>බැක්ටීරියා​</small><br>
       
     </section>
 

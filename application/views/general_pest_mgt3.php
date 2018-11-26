@@ -1,13 +1,20 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 ?><!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Farmer Help</title>
+  <link href="https://www.doa.gov.lk/index.php/si/component/sppagebuilder/page/184-club-root-udarata-elavalu-si" rel="canonical" />
+  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="/components/com_sppagebuilder/assets/css/sppagebuilder.css" type="text/css" />
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="https://www.doa.gov.lk/plugins/system/popup_anywhere/css/noborder.css" type="text/css" />
+  <link rel="stylesheet" href="/media/mod_social_slider/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/media/mod_languages/css/template.css" type="text/css" />
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -45,7 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-
   <header class="main-header">
     <!-- Logo -->
     <a href="<?php echo base_url();?>"="index2.html" class="logo">
@@ -64,37 +70,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           
-        <?php
-        if($_SESSION['user_logged']){
-         echo $this->session->userdata['username'];
-          echo "<a href=\"Auth/logout\" class=\"btn btn-default btn-flat\">Logout</a>";
+        
+          
 
-        }
-        else{
-        echo "<a href=\"index.php/Auth/login\" class=\"btn btn-default btn-flat\">Login</a>";
-        echo "<a href=\"index.php/Auth/register\"=\"#\" class=\"btn btn-default btn-flat\">Register</a>";
-        }      
-           ?> 
+        <a href="<?php echo base_url();?>index.php/Auth/login"="#" class="btn btn-default btn-flat">Login</a>
+        <a href="<?php echo base_url();?>index.php/Auth/register"="#" class="btn btn-default btn-flat">Register</a>
+              
+            
       </div>
     </nav>
   </header>
-
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
-
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
           <a href="<?php echo base_url();?>"="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
-
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -111,39 +110,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-
-            <i class="fa fa-dashboard"></i> <span>පළිබෝධ වර්ග​</span>
-
+            <i class="fa fa-dashboard"></i> <span>Pesticides</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-
-          <li><a href="<?php echo base_url();?>index.php/pesttypes/type1"><i class="fa fa-circle-o"></i> දිළීර​</a></li>
-            <li><a href="<?php echo base_url();?>index.php/pesttypes/type2"><i class="fa fa-circle-o"></i> බැක්ටීරියා</a></li>
-            <li><a href="<?php echo base_url();?>index.php/pesttypes/type3"><i class="fa fa-circle-o"></i> කෘමීන්</a></li>
-
+            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
-
-            <i class="fa fa-dashboard"></i> <span>පළිබෝධ පාළනය​</span>
-
+            <i class="fa fa-dashboard"></i> <span>Pest Control</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-
-            <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
+            <li class="active"><a href="<?php echo base_url();?>"="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
         
-        <li><a href="<?php echo base_url();?>index.php/Message/chatboxx"><i class="fa fa-book"></i> <span>විමසීම්</span></a></li>
-
+        <li><a href="<?php echo base_url();?>index.php/Message/chatboxx"><i class="fa fa-book"></i> <span>ChatBox</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
@@ -157,19 +147,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        Dashboard
-        <small>Control panel</small>
-      
-    </section>
-
-    <!-- Main content -->
-    
-
-        </section>
-        <!-- right col -->
-      </div>
-      <!-- /.row (main row) -->
+    <div class="sppb-row">
+        <div class="sppb-col-sm-2">
+            <div class="sppb-addon-container" style="" data-sppb-wow-duration="300ms">
+            </div>
+        </div>
+        <div class="sppb-col-sm-10 ">
+            <div class="sppb-addon-container" style="padding:10px 10px 10px 10px;">
+            <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
+                <div class="sppb-addon-content">
+                    <p><strong><span style="font-size: 14pt;">ක්ෂේත‍්‍රයේ යේදී වැළඳෙන රෝග</span></strong></p>
+                    
+                    <p><strong><span style="font-size: 14pt;">වළයාකාර පුල්ලි රෝගය/ගෙඹි ඇස් රෝගය</span></strong></p>
+                    <div style="text-align: justify;"><span style="font-size: 12pt;">කෘසිපරේසියේ කුලයේ භෝගවල ශාකයේ පත‍්‍රවලට මයිකොස්පිරෙල්ලා බ‍්‍රැසිකෝලා(<em>Mycosphaerella brassicola</em><em>)</em>නම් දිලීරය මඟින් ඇති කරන රෝගයකි. පත‍්‍රවල වළයාකාරව පුල්ලි ඇති කරයි. පිටතින් ඇති මේරූ පත‍්‍රවල හානිය වැඩිපුර දැකගත හැකිය. අභ්‍යන්තර පත‍්‍රවලට ඇති වන හානියට වඩා අධිකය.</span>
+                    </div>
+                    <div style="text-align: justify;"><span style="font-size: 12pt;"> </span></div>
+                    <p style="text-align: justify;"><span style="font-size: 12pt;"> </span></p>
+                    </div>
+                </div>
+                <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
+                    <div class="sppb-addon-content">
+                        <img class="sppb-img-responsive" src="<?php echo base_url();?>assets/dist/img/walayakara_pulli_rogaya.jpg" alt="">
+                    </div>
+                </div>
+                <div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div>
+                <div class="sppb-addon sppb-addon-text-block sppb-text-left ">
+                    <div class="sppb-addon-content">
+                        <p><span style="font-size: 14pt;"><strong>රෝග ලක්&zwj;ෂණ</strong></span></p>
+                        <p style="text-align: justify;"><span style="font-size: 12pt;">කොළ පැහැති පත&zwj;්&zwj;ර මත, නාරටිවල හෝ නාරටි අතර වළලූ ආකාරයේ පුල්ලි ඇති වේ. මෙම පුල්ලිවල ප&zwj;්&zwj;රමාණය එකිනෙකට වෙනස්වන අතර එහි දාරවල බීජාණු විශාල සංඛ්&zwj;යාවක්&nbsp; දක්නට ලැබේ.</span></p>
+                        <p>&nbsp;</p>
+                        <p><strong><span style="font-size: 14pt;">පාලන ක&zwj;්&zwj;රම</span></strong></p>
+                        <p style="text-align: justify;"><span style="font-size: 12pt;">කෘසිපරේසියේ&nbsp; කුලයේ ශාක රෝග බොහොමයක් බීජ මඟින් ඇතිවන බැවින්&nbsp; සිටුවීමට පෙර සෙ. අංශක 50 ක් ජලයෙහි විනාඩි 15-25 ක් බීජ ගිල්වා තැබිය යුතුය.භෝග සනීපාරක්&zwj;ෂාව සහ භෝග මාරුව&nbsp;&nbsp; ඉතාමත් වැදගත් වන අතර නිර්දේශිත දිලීර නාශකයන් භාවිතා කළ හැක.</span></p>
+                    </div>
+                </div>
+                <div class="sppb-addon sppb-addon-single-image sppb-text-center ">
+                    <div class="sppb-addon-content">
+                        <img class="sppb-img-responsive" src="<?php echo base_url();?>assets/dist/img/namyashili_kandak_athiweema.jpg" alt="">
+                    </div>
+                </div>
+                <div class="sppb-empty-space  clearfix" style="margin-bottom:20px;"></div>
+            </div>
+        </div>
+    </div>
 
     </section>
     <!-- /.content -->
@@ -219,6 +238,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-
 </body>
 </html>

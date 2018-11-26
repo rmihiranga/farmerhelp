@@ -20,12 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		if(isset($_POST['go_login'])) {
-            redirect("auth/login", "refresh");
-        }
-        if(isset($_POST['go_register'])) {
-            redirect("auth/register", "refresh");
-        }
+
+		
+		
+
         $this->load->view('welcome_message.php');
 		
 	}

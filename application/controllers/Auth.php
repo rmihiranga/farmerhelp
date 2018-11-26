@@ -21,10 +21,13 @@ class Auth extends CI_Controller{
             $user = $query->row();
 
             if($user->email){
-                $this->session->set_flashdata("success","Login successfull");
 
-                $_SESSION['user_logged']=TRUE;
-                $_SESSION['username'] = $user->username;
+               $session_data = array(
+                   'username'=>$username
+               );
+               $_SESSION['user_logged']=TRUE;
+                $this->session->set_userdata($session_data);
+                echo $this->session->userdata['username'];
 
                 redirect("welcome", "refresh");
             }else{
@@ -37,10 +40,10 @@ class Auth extends CI_Controller{
     }
 
     public function logout(){
-        if(isset($_POST['logout'])) {
-            $this->session->sess_destroy();
-            redirect("welcome","refresh");
-        }
+        $this->session->unset_userdata('username');
+        $_SESSION['user_logged']=FALSE;
+        redirect(base_url(), "refresh");
+
     }
 
     public function register(){
