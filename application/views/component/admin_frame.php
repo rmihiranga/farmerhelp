@@ -111,6 +111,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              
             </span>
           </a>
+          <ul class="treeview-menu">
+
+          <li><a href="<?php echo base_url();?>index.php/Expert/register"><i class="fa fa-circle-o"></i>Add new Expert</a></li>
+            <li><a href="<?php echo base_url();?>index.php/Expert/manage"><i class="fa fa-circle-o"></i>Manage Experts</a></li>
+
+
+          </ul>
     
     </section>
     <!-- /.sidebar -->

@@ -36,9 +36,9 @@
   <tr>
     <th>User Name</th>
     <th>Email</th>
-    <th>Gender</th>
+
     <th>Phone Number</th>
-    <th>District</th>
+
     <th>Update</th>
     <th>Delete</th>
   </tr>
@@ -46,9 +46,9 @@
      <tr>
          <td><?php echo $posts->username;?></td>
          <td><?php echo $posts->email?></td>
-         <td><?php echo $posts->gender?></td>
+     
          <td><?php echo $posts->phone?></td>
-         <td><?php echo $posts->district?></td>
+
         <td><i class="fa fa-edit" style="font-size:30px;color:red"></i></td>
        <td><i class="fa fa-trash-o" style="font-size:36px"></i></td>
       </tr>     
