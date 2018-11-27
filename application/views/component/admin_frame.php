@@ -67,12 +67,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php
         if($_SESSION['user_logged']){
          echo $this->session->userdata['username'];
-          echo "<a href=\"index.php/Auth/logout\" class=\"btn btn-default btn-flat\">Logout</a>";
+          echo "<a href=".base_url()."index.php/Auth/logout class=\"btn btn-default btn-flat\">Logout</a>";
 
         }
         else{
-        echo "<a href=\"index.php/Auth/login\" class=\"btn btn-default btn-flat\">Login</a>";
-        echo "<a href=\"index.php/Auth/register\"=\"#\" class=\"btn btn-default btn-flat\">Register</a>";
+          echo "<a href=".base_url()."index.php/Auth/login class=\"btn btn-default btn-flat\">Login</a>";
+          echo "<a href=".base_url()."index.php/Auth/register class=\"btn btn-default btn-flat\">Register</a>";
+
         }      
            ?> 
       </div>
