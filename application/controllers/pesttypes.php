@@ -15,4 +15,8 @@ class pesttypes extends CI_Controller{
         $this->load->view('pest_types3.php');
     }
 
+    public function type4(){
+        $this->load->view('pesticide_01.php');
+    }
+
 }

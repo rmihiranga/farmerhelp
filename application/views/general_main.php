@@ -21,8 +21,8 @@ if($_SESSION['user_logged'] ){
     <section class="content-header">
 
 <h1>
-      පළිබෝධ වර්ග​
-        <small>දිළීර​</small>
+පළිබෝධ පාළනය​
+        <small>ඒකාබද්ධ පළිබෝධ​</small>
       
     </section>
 
