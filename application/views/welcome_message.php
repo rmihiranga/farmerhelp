@@ -18,7 +18,7 @@ if($_SESSION['user_logged'] ){
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-     
+     <p>welcome</p>
     
 </div>
   
