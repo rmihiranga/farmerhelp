@@ -1,6 +1,14 @@
 <?php
 
 class Auth extends CI_Controller{
+    public function __construct()
+    {
+        parent :: __construct();
+        $this->load->model('Message_model');
+        $this->load->helper(array('form','url'));
+        $this->load->helper('url');
+    }
+    
 
     public function login(){
 
@@ -86,6 +94,21 @@ class Auth extends CI_Controller{
         $this->load->model('Auth_model');
         $data['post']=$this->Auth_model->getallusers();
         $this->load->view('members',$data);
+    }
+    public function choose(){
+       if($_SESSION['user_logged']==TRUE){
+        $this->load->view('chatbox');
+        //$this->load->helper('url');
+
+        }
+        else{
+            //$this->load->library('../controller/Message');
+            $this->login();
+
+            //$this->load->helper('url');
+
+        }
+    
     }
     
 }

@@ -134,7 +134,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </ul>
         </li>
         
-        <li><a href="<?php echo base_url();?>index.php/Message/chatboxx"><i class="fa fa-book"></i> <span>විමසීම්</span></a></li>
+        <li><a href="<?php echo base_url();?>index.php/Auth/choose"><i class="fa fa-book"></i> <span>විමසීම්</span></a></li>
 
         <li class="header">LABELS</li>
         <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
