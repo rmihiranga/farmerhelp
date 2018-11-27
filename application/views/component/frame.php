@@ -151,7 +151,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <ul class="treeview-menu">
 
             <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
+            <li><a href="<?php echo base_url();?>index.php/pesticide/profile"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
           </ul>
         </li>
         
