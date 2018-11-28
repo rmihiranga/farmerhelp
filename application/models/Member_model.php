@@ -10,6 +10,7 @@ Class Member_model extends CI_model{
         $this->db->where('id', $id);
         $this->db->delete('register');
         }
+        
     function update_member($id,$data){
             $this->db->where('id', $id);
             $this->db->update('register', $data);

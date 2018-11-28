@@ -66,7 +66,7 @@ class Auth extends CI_Controller{
             $this->form_validation->set_rules('phone', 'Phone', 'required');
 
             if($this->form_validation->run() == TRUE){
-                echo'form validated';
+                //echo'form validated';
                 
                 $data = array(
                     'username' => $_POST['username'],
@@ -80,6 +80,7 @@ class Auth extends CI_Controller{
                 $this->db->insert('register',$data);
 
                 $this->session->set_flashdata("success","Registration successfull");
+                redirect(base_url(), "refresh");
             }
         }
         

@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
         <?php
         if($_SESSION['user_logged']){
-         echo $this->session->userdata['username'];
+         //echo $this->session->userdata['username'];
           echo "<a href=".base_url()."index.php/Auth/logout class=\"btn btn-default btn-flat\">Logout</a>";
 
         }
@@ -85,6 +85,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="<?php echo base_url();?>assets/dist/img/picon.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>  
+        <?php
+        if($_SESSION['user_logged']){
+         echo $this->session->userdata['username'];
+          //echo "<a href=".base_url()."index.php/Auth/logout class=\"btn btn-default btn-flat\">Logout</a>";
+        }
+      ?>  
+      </p>
+          <!-- <a href="<?php //echo base_url()."assets/";?>"="#"><i class="fa fa-circle text-success"></i> Online</a> -->
+        </div>
+      </div>
 
      
 

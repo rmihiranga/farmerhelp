@@ -25,10 +25,11 @@ if($_SESSION['user_logged'] ){
         
       
     </section>
+    <br></br>
 
     <!-- Main content -->
-    <div class="content-wrapper">
-    <ul>
+    <div class="container">
+    <ul1>
         <li class="active"><a href="<?php echo base_url();?>index.php/pesticide/profile1"></i> ඒකාබද්ධ පළිබෝධ පාලනය හැදින්වීම​</a></li>
         <li class="active"><a href="<?php echo base_url();?>index.php/pesticide/profile2"></i> ඒකාබද්ධ පළිබෝධ පාලන උපක්&zwj;රම​</a></li>
         
@@ -38,7 +39,7 @@ if($_SESSION['user_logged'] ){
             <li class="active"><a href="<?php echo base_url();?>index.php/pesticide/profile6"></i> වී වගාවේ රෝග(දිලීර)</a></li>
     
         
-    </ul>
+    </ul1>
     </div>
 
         </section>
@@ -50,4 +51,19 @@ if($_SESSION['user_logged'] ){
     <!-- /.content -->
   </div>
   </body>
+  <style>
+  ul1 {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+
+ul1 li {
+  border: 1px solid #ddd; /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+}
+</style>
 </html>
