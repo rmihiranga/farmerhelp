@@ -42,7 +42,37 @@ class Expert extends CI_Controller{
         $this->load->model('Expert_model');
         $data['post']=$this->Expert_model->getallexperts();
         $this->load->view('manageexperts',$data);
+        if(isset($_POST['Update'])) {
+            $this->load->model('Expert_model');
+            $id= $_POST['id'];
+            $data = array(
+                'username' => $_POST['username'],
+                'email' => $_POST['email'],
+                'phone' => $_POST['phone'],
+            );
+             $this->Expert_model->update_expert($id,$data);
+            }
     }
+    function delete_expert() {
+        $this->load->model('Expert_model');
+        $id = $this->uri->segment(3);
+        $this->Expert_model->delete_expert($id); 
+        redirect(base_url()."index.php/Expert/experts", "refresh");
+
+        }
+        function update_expert(){
+            if(isset($_POST['Update'])) {
+            $this->load->model('Expert_model');
+            $id= $_POST['id'];
+            $data = array(
+                'username' => $_POST['username'],
+                'email' => $_POST['email'],
+                'phone' => $_POST['phone'],
+            );
+             $this->Expert_model->update_expert($id,$data);
+            }
+            $this->load->view('manageexperts');
+        }
     
 
 }

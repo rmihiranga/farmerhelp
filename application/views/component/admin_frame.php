@@ -92,9 +92,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="<?php echo base_url();?>"="#">
+          <a href="<?php echo base_url();?>index.php/Member/members"="#">
 
-            <i class="fa fa-dashboard"></i>  <span>Members<a href ="index.php/Auth/member"> </span>
+            <i class="fa fa-dashboard"></i>  <span>Members</span>
 
             <span class="pull-right-container">
             
@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <ul class="treeview-menu">
 
           <li><a href="<?php echo base_url();?>index.php/Expert/register"><i class="fa fa-circle-o"></i>Add new Expert</a></li>
-            <li><a href="<?php echo base_url();?>index.php/Expert/manage"><i class="fa fa-circle-o"></i>Manage Experts</a></li>
+            <li><a href="<?php echo base_url();?>index.php/Expert/experts"><i class="fa fa-circle-o"></i>Manage Experts</a></li>
 
 
           </ul>
