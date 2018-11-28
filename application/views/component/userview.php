@@ -174,71 +174,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <div class="slideshow-container">
+    <div class="w3-content w3-display-container">
+  <img class="mySlides" src="<?php echo base_url();?>assets/imgs/1.jpg" style="width:100%">
+  <img class="mySlides" src="<?php echo base_url();?>assets/imgs/5.jpg" style="width:100%">
+  <img class="mySlides" src="<?php echo base_url();?>assets/imgs/3.jpg" style="width:100%">
+  <img class="mySlides" src="<?php echo base_url();?>assets/imgs/4.jpg" style="width:100%">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 4</div>
-  <img src="<?php echo base_url();?>assets/imgs/1.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 4</div>
-  <img src="<?php echo base_url();?>assets/imgs/5.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 4</div>
-  <img src="<?php echo base_url();?>assets/imgs/3.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">4 / 4</div>
-  <img src="<?php echo base_url();?>assets/imgs/4.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
 </section>
 </div>
   <script>
 var slideIndex = 1;
-showSlides(slideIndex);
+showDivs(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
- 
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showDivs(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  x[slideIndex-1].style.display = "block";  
 }
 </script>
   <style>
