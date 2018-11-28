@@ -17,7 +17,7 @@ class Message extends CI_Controller
     {
         $save =array(
             'comment_id'=> $this->input->post('comment_id'),
-            'name'=> $this->input->post('name'),
+            'name'=> $this->session->userdata['username'],
             'message' => $this->input->post('message'),
             'parent_id'=>$this->input->post('parent_id'),
             'date' => date('Y-m-d H:i:s')

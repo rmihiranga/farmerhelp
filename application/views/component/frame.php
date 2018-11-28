@@ -34,6 +34,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/chatbox.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -69,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
         <?php
         if($_SESSION['user_logged']){
-         echo $this->session->userdata['username'];
+         //echo $this->session->userdata['username'];
           echo "<a href=".base_url()."index.php/Auth/logout class=\"btn btn-default btn-flat\">Logout</a>";
 
         }
@@ -87,6 +92,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+    <div class="user-panel">
+        <div class="pull-left image">
+          <img src="<?php echo base_url();?>assets/dist/img/picon.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>  
+        <?php
+        if($_SESSION['user_logged']){
+         echo $this->session->userdata['username'];
+          //echo "<a href=".base_url()."index.php/Auth/logout class=\"btn btn-default btn-flat\">Logout</a>";
+        }
+      ?>  
+      </p>
+          <!-- <a href="<?php //echo base_url()."assets/";?>"="#"><i class="fa fa-circle text-success"></i> Online</a> -->
+        </div>
+      </div>
       <!-- Sidebar user panel -->
 
      
@@ -104,6 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
+
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="<?php echo base_url();?>"="#">
@@ -134,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <ul class="treeview-menu">
 
             <li class="active"><a href="<?php echo base_url();?>index.php/general_pest/profile"><i class="fa fa-circle-o"></i> සාමාන්‍ය (රසායනික)</a></li>
-            <li><a href="<?php echo base_url();?>"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
+            <li><a href="<?php echo base_url();?>index.php/pesticide/profile"="index2.html"><i class="fa fa-circle-o"></i> ඒකාබද්ධ පළිබෝධ​</a></li>
           </ul>
         </li>
         

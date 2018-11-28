@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 if($_SESSION['user_logged'] ){
   if($this->session->userdata['type']==1){
     $this->load->view('component/admin_frame');
@@ -25,10 +26,8 @@ if($_SESSION['user_logged'] ){
     <div class =chat>
     <h2>ඔබගේ ගැටලූ අප වෙත යොමුකරන්න​.</h2>
     <form id="form_reply"  >
-    <div class="form-group required">
-        <input type ="number" name ="comment_id" id= "rcommentId" hidden >
-        <label class="exampleInput">Name  (නම)​ </label>
-        <input type="text" class="form-control" id="rname" name="name" placeholder="Enter name" >
+    <div class="container">
+      <?php echo $this->session->userdata['username']; ?>
     
     </div>
     <div class="form-group required">
@@ -41,10 +40,8 @@ if($_SESSION['user_logged'] ){
     <div id="rcomment-message">Reply Added Successfully!</div>
     </form>
     <form id="form_comment" >
-    <div class="form-group required">
-        <input type ="number" name ="comment_id" id= "commentId" hidden >
-        <label class="exampleInput">Name  (නම)​ </label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" >
+    <div class="container">
+      <?php echo $this->session->userdata['username']; ?>
     
     </div>
     <div class="form-group required">
