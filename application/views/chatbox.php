@@ -23,8 +23,9 @@ if($_SESSION['user_logged'] ){
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
    
-    <div class =chat>
+    <div id=text class =chat>
     <h2>ඔබගේ ගැටලූ අප වෙත යොමුකරන්න​.</h2>
+    </div>
     <form id="form_reply"  >
     <div class="container">
       <?php echo $this->session->userdata['username']; ?>
@@ -37,24 +38,25 @@ if($_SESSION['user_logged'] ){
     
     <input type="button" class="btn-submit" id="replyButton"
                         value="Publish" />
-    <div id="rcomment-message">Reply Added Successfully!</div>
+   
     </form>
-    <form id="form_comment" >
+    <form id="form_comment">
     <div class="container">
-      <?php echo $this->session->userdata['username']; ?>
-    
-    </div>
+    <label  class="exampleInput">Name :</label>
+      <label id="namee" class="exampleInput"><?php echo $this->session->userdata['username']; ?></label>
+    </div><br>
     <div class="form-group required">
         <label class="exampleInput">Enter Your Problem (ඔබට ඇති ගැටලුව සදහන් කරන්න)</label>
         <textarea type="text" class="form-control" id="textarea" placeholder="Enter here" name ="message" ></textarea>
     </div>
     
-    <input type="button" class="btn-submit" id="submitButton"
+    <input type="submit" class="btn-submit" id="submitButton" name="submit"
                         value="Publish" />
     <div id="comment-message">Comments Added Successfully!</div>
     </form>
-  
+    <div id=text>
     <h2>ඔබ අප වෙත යොමුකරන ලද ගැටලු සහ ඒවාට විසදුම්.</h2>
+    </div>
     <div id="output"></div>
     </div>
     <script>
@@ -62,8 +64,9 @@ if($_SESSION['user_logged'] ){
     function showReply(commentId) 
     {
         document.getElementById('form_reply').style.visibility = "visible";
-        $("#form_reply").css( {position:"absolute", top:event.pageY, left: event.pageX});
         $("#form_reply").toggle();
+        $("#form_reply").css( {position:"absolute", top:event.pageY, left: event.pageX});
+        
         parent_id=commentId;
         
     }
@@ -78,7 +81,7 @@ if($_SESSION['user_logged'] ){
             var comment_id = $('#rcommentId').val();
             var name = $('#rname').val();
             var message = $('#rtextarea').val();
-            alert(name);
+           
         
             $.ajax({
                 url : "<?php echo site_url('Message/chatbox')?>/",
@@ -150,6 +153,37 @@ if($_SESSION['user_logged'] ){
                         }
                 
             });
+            $.ajax({
+                
+                url : "<?php echo site_url('Email/sendMailtoexpert')?>/",
+            //	dataType :"json",
+                data : '',
+                async:false,
+                timeout: 0,
+                type : 'post',
+                error: function (xhr, ajaxOptions, thrownError) {
+                        alert(xhr.status);
+                        alert(thrownError);
+                        },
+                        success: function (response)
+                        {
+                            //var result = eval('(' + response + ')');
+                            if (response)
+                            {
+                            // alert('frf');
+                                $("#comment-message").css('display', 'inline-block');
+                                $("#name").val("");
+                                $("#textarea").val("");
+                                $("#commentId").val("");
+                            listComment();
+                            } else
+                            {
+                                alert("Failed to add comments !");
+                                return false;
+                            }
+                        }
+                
+            });
             
     });
 
@@ -160,7 +194,7 @@ if($_SESSION['user_logged'] ){
 
                 });
 
-    function listComment() {
+    function listComment(){
         $.post("<?php echo site_url('Message/chatlist')?>/",
                             function (data) {
                                 var data = JSON.parse(data);
@@ -182,7 +216,7 @@ if($_SESSION['user_logged'] ){
                                                                     
                                     if (parent == "0")
                                     {
-                                        comments = "<div class='comment-row'>"+
+                                        comments = "<div class='comment-row' id>"+
                                         "<div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
                                         "<div class='comment-text'>" + data[i]['message'] + "</div>"+
                                         "<div><a class='btn-reply' onClick='showReply(" + commentId + ")'>Reply</a></div>"+
@@ -205,7 +239,7 @@ if($_SESSION['user_logged'] ){
                     {
                         if (commentId == data[i].parent_id)
                         {
-                            var comments = "<div class='comment-row'>"+
+                            var comments = "<div class='comment-row' id='replyy'>"+
                             " <div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
                             "<div class='comment-text'>" + data[i]['message'] + "</div>"+
                             "<div><a class='btn-reply' onClick='showReply(" + data[i]['comment_id'] + ")'>Reply</a></div>"+
@@ -221,6 +255,17 @@ if($_SESSION['user_logged'] ){
 
         </script>
     <style>
+    #replyy{
+        color:purple;
+    }
+    #namee{
+        font-size: 20px;
+        color:white;
+    }
+    #text{
+        text-align: center;
+        color:blue;
+    }
     .form-group{
         width:80%
     }
@@ -275,18 +320,21 @@ if($_SESSION['user_logged'] ){
 
     ul {
         list-style-type: none;
+    
     }
 
     .comment-row {
         border-bottom: #e0dfdf 1px solid;
         margin-bottom: 15px;
         padding: 15px;
+        
     }
 
     .outer-comment {
         background: #F0F0F0;
         padding: 20px;
         border: #dedddd 1px solid;
+        
     }
 
     span.commet-row-label {
@@ -302,6 +350,7 @@ if($_SESSION['user_logged'] ){
     }
     .comment-text {
         margin: 10px 0px;
+    
     }
     .btn-reply {
         font-size: 0.8em;
@@ -313,7 +362,9 @@ if($_SESSION['user_logged'] ){
         margin-left: 20px;
         color: #189a18;
         display: none;
+    
     }
+    
     
     </style>
 

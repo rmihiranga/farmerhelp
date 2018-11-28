@@ -100,6 +100,7 @@ class Auth extends CI_Controller{
        if($_SESSION['user_logged']==TRUE){
         $this->load->view('chatbox');
         //$this->load->helper('url');
+       
 
         }
         else{
@@ -111,6 +112,7 @@ class Auth extends CI_Controller{
         }
     
     }
+    
     
 }
 
