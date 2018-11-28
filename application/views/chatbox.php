@@ -23,8 +23,9 @@ if($_SESSION['user_logged'] ){
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
    
-    <div class =chat>
+    <div id=text class =chat>
     <h2>ඔබගේ ගැටලූ අප වෙත යොමුකරන්න​.</h2>
+    </div>
     <form id="form_reply"  >
     <div class="container">
       <?php echo $this->session->userdata['username']; ?>
@@ -39,22 +40,23 @@ if($_SESSION['user_logged'] ){
                         value="Publish" />
     <div id="rcomment-message">Reply Added Successfully!</div>
     </form>
-    <form id="form_comment" >
+    <form id="form_comment">
     <div class="container">
-      <?php echo $this->session->userdata['username']; ?>
-    
-    </div>
+    <label  class="exampleInput">Name :</label>
+      <label id="namee" class="exampleInput"><?php echo $this->session->userdata['username']; ?></label>
+    </div><br>
     <div class="form-group required">
         <label class="exampleInput">Enter Your Problem (ඔබට ඇති ගැටලුව සදහන් කරන්න)</label>
         <textarea type="text" class="form-control" id="textarea" placeholder="Enter here" name ="message" ></textarea>
     </div>
     
-    <input type="button" class="btn-submit" id="submitButton"
+    <input type="submit" class="btn-submit" id="submitButton" name="submit"
                         value="Publish" />
     <div id="comment-message">Comments Added Successfully!</div>
     </form>
-  
+    <div id=text>
     <h2>ඔබ අප වෙත යොමුකරන ලද ගැටලු සහ ඒවාට විසදුම්.</h2>
+    </div>
     <div id="output"></div>
     </div>
     <script>
@@ -78,7 +80,7 @@ if($_SESSION['user_logged'] ){
             var comment_id = $('#rcommentId').val();
             var name = $('#rname').val();
             var message = $('#rtextarea').val();
-            alert(name);
+           
         
             $.ajax({
                 url : "<?php echo site_url('Message/chatbox')?>/",
@@ -150,6 +152,37 @@ if($_SESSION['user_logged'] ){
                         }
                 
             });
+            $.ajax({
+                
+                url : "<?php echo site_url('Email/sendMailtoexpert')?>/",
+            //	dataType :"json",
+                data : '',
+                async:false,
+                timeout: 0,
+                type : 'post',
+                error: function (xhr, ajaxOptions, thrownError) {
+                        alert(xhr.status);
+                        alert(thrownError);
+                        },
+                        success: function (response)
+                        {
+                            //var result = eval('(' + response + ')');
+                            if (response)
+                            {
+                            // alert('frf');
+                                $("#comment-message").css('display', 'inline-block');
+                                $("#name").val("");
+                                $("#textarea").val("");
+                                $("#commentId").val("");
+                            listComment();
+                            } else
+                            {
+                                alert("Failed to add comments !");
+                                return false;
+                            }
+                        }
+                
+            });
             
     });
 
@@ -160,7 +193,7 @@ if($_SESSION['user_logged'] ){
 
                 });
 
-    function listComment() {
+    function listComment(){
         $.post("<?php echo site_url('Message/chatlist')?>/",
                             function (data) {
                                 var data = JSON.parse(data);
@@ -221,6 +254,14 @@ if($_SESSION['user_logged'] ){
 
         </script>
     <style>
+    #namee{
+        font-size: 20px;
+        color:white;
+    }
+    #text{
+        text-align: center;
+        color:blue;
+    }
     .form-group{
         width:80%
     }
