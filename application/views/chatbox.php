@@ -260,7 +260,7 @@ if($_SESSION['user_logged'] ){
     }
     #namee{
         font-size: 20px;
-        color:white;
+        color:#999900;
     }
     #text{
         text-align: center;
@@ -287,6 +287,7 @@ if($_SESSION['user_logged'] ){
     body {
         font-family: Arial;
         width: 100%;
+        
     }
 
     .comment-form-container {
@@ -318,8 +319,10 @@ if($_SESSION['user_logged'] ){
         cursor:pointer;
     }
 
-    ul {
+    ul 
+    {
         list-style-type: none;
+        font-size: 20px;
     
     }
 
@@ -331,8 +334,8 @@ if($_SESSION['user_logged'] ){
     }
 
     .outer-comment {
-        background: #F0F0F0;
-        padding: 20px;
+        background: #D3D3D3;
+        padding: 16px;
         border: #dedddd 1px solid;
         
     }
@@ -364,8 +367,6 @@ if($_SESSION['user_logged'] ){
         display: none;
     
     }
-    
-    
     </style>
 
     

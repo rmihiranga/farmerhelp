@@ -5,10 +5,10 @@ if($_SESSION['user_logged'] ){
     $this->load->view('component/admin_frame');
   }
   else{
-    $this->load->view('component/frame');
+    $this->load->view('component/userview');
   }
   }else{
-    $this->load->view('component/frame');
+    $this->load->view('component/userview');
   }
 
 
