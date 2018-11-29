@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="<?php echo base_url();?>"="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      
         <span class="sr-only">Toggle navigation</span>
       </a>
 
