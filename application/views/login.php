@@ -30,7 +30,7 @@
       <div class="col-md-12 col-md-offset-2"><br>
       <div class="container2">
       <h3 class="text-center pb-2 pt-2 "><strong>Login</strong></h3>
-</div>
+      </div>
       
         
         <?php if (isset($_SESSION['success'])) { ?>

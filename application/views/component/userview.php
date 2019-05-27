@@ -60,12 +60,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Farmer</b>Help</span>
+      <span class="logo-lg"><b>ගොවි</b>සවිය</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="<?php echo base_url();?>"="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      
         <span class="sr-only">Toggle navigation</span>
       </a>
 
@@ -162,11 +162,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <li><a href="<?php echo base_url();?>index.php/Auth/choose"><i class="fa fa-book"></i> <span>විමසීම්</span></a></li>
 
-        <li class="header">LABELS</li>
-        <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="<?php echo base_url();?>"="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-      </ul>
+        
     </section>
     <!-- /.sidebar -->
     

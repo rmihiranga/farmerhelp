@@ -45,6 +45,7 @@
     <th>Delete</th>
     <th>Send email</th>
   </tr>
+  <br></br>
   
   <?php foreach($post as $posts){?>
      <tr>
@@ -104,7 +105,9 @@
       
      <?php }?>  
 </table>
+<br>
 <h1> Update Expert </h1>
+
 <form action="" method="POST">
 <input class="form-control" name="id" id="id" type="hidden" >
         <div class ="form-group">

@@ -14,7 +14,7 @@ class Expert extends CI_Controller{
             $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
             $this->form_validation->set_rules('confirmPassword', 'ConfirmPassword', 'required|min_length[5]|matches[password]');
             $this->form_validation->set_rules('email', 'Email', 'required');
-            $this->form_validation->set_rules('phone', 'Phone', 'required');
+            $this->form_validation->set_rules('phone', 'Phone', 'required|max_length[10]');
 
             if($this->form_validation->run() == TRUE){
                 echo'form validated';

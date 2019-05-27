@@ -20,7 +20,7 @@ class Message extends CI_Controller
             'name'=> $this->session->userdata['username'],
             'message' => $this->input->post('message'),
             'parent_id'=>$this->input->post('parent_id'),
-            'date' => date('Y-m-d H:i:s')
+            'date' => date('Y-m-d H:i:s'),
             
         );
         

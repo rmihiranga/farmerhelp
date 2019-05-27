@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 if($_SESSION['user_logged'] ){
   if($this->session->userdata['type']==1){
-    $this->load->view('component/admin_frame');
+    $this->load->view('adminview');
   }
   else{
     $this->load->view('component/userview');
@@ -18,7 +18,7 @@ if($_SESSION['user_logged'] ){
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-     <p>welcome</p>
+     <!--<p>welcome</p>-->
     
 </div>
   

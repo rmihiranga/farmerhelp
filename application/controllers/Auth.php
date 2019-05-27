@@ -16,7 +16,7 @@ class Auth extends CI_Controller{
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
 
         if($this->form_validation->run() == TRUE){
-            echo'form validated';
+            //echo'form validated';
 
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -37,7 +37,7 @@ class Auth extends CI_Controller{
                );
                $_SESSION['user_logged']=TRUE;
                 $this->session->set_userdata($session_data);
-                echo $this->session->userdata['username'];
+                //echo $this->session->userdata['username'];
 
                 redirect(base_url(), "refresh");
             }else{

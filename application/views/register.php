@@ -19,18 +19,16 @@
 
   <body class="bg">
 
-    <div class="container">
-      <div class="jumbotron1">
-        <h1>Register  ලියාපදිංචි කරන්න</h1> 
-        <p>Enter your Details here.</p> 
-      </div>
-
-  
-    </div>
     
 
-    <div class="container center_div">
-      <div class="col-md-5 col-md-offset-3">
+  
+  <div class="container3">
+    <div class="container2 ">
+      <div class="col-md-12 col-md-offset-2"><br>
+      <div class="container2">
+      <h3 class="text-center pb-2 pt-2 "><strong>Register</strong></h3>
+      
+      </div>
 
         <?php if (isset($_SESSION['success'])) { ?>
           <script type='text/javascript'>alert('Registration Successfull')</script>
@@ -39,28 +37,27 @@
         <?php echo validation_errors(); ?>
         <form action="" method="POST">
         <div class ="form-group">
-            <label for="Username">Username</label>
-            <input class="form-control" name="username" id="username" type="text">
+            <input class="form-control" placeholder="Username" name="username" id="username" type="text">
         </div>
 
         <div class ="form-group">
-            <label for="Password">Password</label>
-            <input class="form-control" name="password" id="password" type="password">
+            
+            <input class="form-control" placeholder="Password" name="password" id="password" type="password">
         </div>
 
         <div class ="form-group">
-            <label for="ConfirmPassword">Confirm Password</label>
-            <input class="form-control" name="confirmPassword" id="confirmPassword" type="password">
+            
+            <input class="form-control" placeholder="Confirm Password" name="confirmPassword" id="confirmPassword" type="password">
         </div>
 
         <div class ="form-group">
-            <label for="Email">Email</label>
-            <input class="form-control" name="email" id="email" type="text">
+            
+            <input class="form-control" placeholder="Email" name="email" id="email" type="text">
         </div>
 
         <div class ="form-group">
-            <label for="Phone">Phone</label>
-            <input class="form-control" name="phone" id="phone" type="text">
+            
+            <input class="form-control" placeholder="Phone" name="phone" id="phone" type="text">
         </div>
 
         <div class ="form-group">
@@ -104,7 +101,9 @@
 
         <div>
           <button class="btn btn-primary" name="register">Register</button>
+          
         </div>
+        <br>
 
         </form>
       </div>
@@ -112,4 +111,34 @@
     
     <script src="<?php echo base_url(); ?>assets/js/bootsrap.min.js"></script>
   </body>
+  <style>
+    .container2 { 
+    width: 35%;
+    box-shadow:0px 0px 12px #828282;
+
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: auto;
+    margin-bottom:auto;
+    margin-right:auto;
+    margin-left:auto;
+    }
+
+    .container3 { 
+    
+    width: 100%;
+    padding-top:15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    
+}
+
+  body{
+    background-color: #cccccc;
+    background-image: url("<?php echo base_url(); ?>assets/dist/img/Farm.jpg");
+  }
+  
+}
+    </style>
 </html>
